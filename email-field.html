@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="email-field.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "A53QGs2Y4PaSQ_m_C",
+            });
+        })();
+    </script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="input-group">
+        <label id="email-label">enter your email here</label>
+        <input type="email" id="email-field" spellcheck="false" onkeyup="validateEmail()" autocomplete="false">
+        <span id="email-error"></span>
+        <button id="verify" onclick="sendemail()">verify</button>
+    </div>
+    <div id="box"></div>
+    <div class="otp" id="otp-class">
+        <input type="number" id="otp">
+        <button id="conform" onclick="otpchecking()">conform</button>
+        <span id="reslut"></span>
+    </div>
+    <script type="text/javascript" src="email-field.js">
+
+    </script>
+
+</body>
+
+</html>
